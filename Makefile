@@ -11,14 +11,15 @@ all:
 install:
 	@install -v -d "$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/"
 	@install -v -m0755 src/csv.bash "$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/csv.bash"
-	@install -v -m0755 src/csv.awk "$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/csv.awk"
 	@echo
 	@echo "pass-csv was succesfully installed"
 	@echo
 
 uninstall:
 	@rm -vrf \
-		"$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/csv.bash" \
-		"$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/csv.awk" \
+		"$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/csv.bash"
 
-.PHONY: install uninstall
+lint:
+	shellcheck -s bash src/csv.bash
+
+.PHONY: install uninstall lint

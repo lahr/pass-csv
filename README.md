@@ -33,4 +33,4 @@ Account Created: 2021-02-01
 ## Installation
 
 - `make install`
-- Alternatively, you can copy the `src/csv.*` files to `~/.password-store/.extensions`, make the bash script executable and set the `PASSWORD_STORE_ENABLE_EXTENSIONS` environment variable to `true`.
+- Alternatively, you can copy `src/csv.bash` to `~/.password-store/.extensions`, make it executable and set the `PASSWORD_STORE_ENABLE_EXTENSIONS` environment variable to `true`.
