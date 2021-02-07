@@ -2,7 +2,7 @@
 
 [[ $# -lt 1 ]] && die "Usage: $PROGRAM $COMMAND key1 key2 ..."
 for key in "$@"; do
-    [[ -z "$key" || "$key" == *"\""* || "$key" == *","* || "$key" == *":"* ]] && die "Arguments may not contain double quotes, commas and colons"
+    [[ -z "$key" || "$key" == *"\""* || "$key" == *","* || "$key" == *":"* ]] && die "Arguments may not contain double quotes, commas or colons"
 done
 
 AWK=$(cat - <<-'EOF'
