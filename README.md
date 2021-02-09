@@ -33,4 +33,5 @@ Account Created: 2021-02-01
 ## Installation
 
 - `make install`
+- On MacOS via Homebrew with [this tap](https://github.com/SimplyDanny/homebrew-pass-extensions/)
 - Alternatively, you can copy `src/csv.bash` to `~/.password-store/.extensions`, make it executable and set the `PASSWORD_STORE_ENABLE_EXTENSIONS` environment variable to `true`.
